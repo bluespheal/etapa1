@@ -10,7 +10,7 @@
 
 def pig_latin_word(word)
   word = gets.chomp
-  word =~ /\A[aeiou]/ ? p word + "way" : "hola"
+  word =~ /\A[aeiou]/ ? word + "way" : "hola"
 end
 
 # Script : Multiple word converter to Pig Latin
