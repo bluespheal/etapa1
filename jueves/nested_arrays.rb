@@ -3,21 +3,24 @@ def back(color)
 end
 
 def front(color)
-  ["Peon-#{color}"]*8
+  ["Peon-#{color}"] * 8
+end
+
+def middle_one
+  ["##"," "] * 4
+end
+
+def middle_two
+  [" ","##"] * 4
 end
 
 def chess_board
   color = "N"
-  middle_one = ["B", "N"]*4
-  middle_two = ["N", "B"]*4
-  middle = [middle_one, middle_two,middle_one, middle_two]
-
-
-  p board = [back("N"), front("N"), middle, front("B"), back("B")]
-
+  board = [back("N"), front("N"), middle_one, middle_two, middle_one, middle_two, front("B"), back("B")]
+  board.each { |x| p x.map{ |y| y.center(9) } }
 end
 
-# chess_board
+p chess_board[1][3]
 
 def table
   [["Nombre", "Edad", "Genero", "Grupo", "Calificaciones"],
@@ -35,8 +38,4 @@ p table[2][2]  == "Femenino"
 p table[3][3]  == "Primero"
 p table[3][4]  == [8, 7, 7, 9, 8]
 p table[4][4][2]  == 6
-
-puts gato = [ ["X", "X", "O"], \n,
-         ["O", "X", "O"], \n,
-         ["O", "O", "X"] ].to_s
 

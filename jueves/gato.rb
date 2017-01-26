@@ -1,31 +1,24 @@
-def gato
+def gato_one
  gato = []
  random(gato)
- gato#.each_slice(3).to_a
+ gato.shuffle.each_slice(3).to_a.each{|x|p x}
 end
 
 def random(gato)
-  oo = 0
-  pick = "" 
-  total = 0
-  while total <= 8
-    var = rand(2)
-    if var == 1 && oo <= 4 
-      gato << "O"
-      oo +=1
-      total += 1
-    else
-      gato << "X"
-      total += 1
-    end
-  end
+  num_o = rand(4..5)
+  num_o.times {gato << "O"}
+  num_x = 9 - num_o
+  num_x.times {gato << "X"}
 end
 
-p gato
-p gato
-p gato
-p gato
-p gato
-p gato
-p gato
+p gato_one[2][2]
 
+def gato_two
+  gato = []
+  random(gato)
+  gato = gato.shuffle
+  que_sera = Array.new(3) { gato.pop(3) }  
+  que_sera.each { |x| p x } 
+end
+
+p gato_two[2][2]
