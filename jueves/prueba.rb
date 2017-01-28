@@ -5,11 +5,11 @@ def finder
 end
 
 def horizontal(array)
-let = 0
+  let = 0
   base = 0
   while let < array[1].length
     if array[0][base] == array[1][let]
-      p  let , array[1][let]
+      p let , array[1][let]
       let += 1 
       base += 1
     else
@@ -20,16 +20,16 @@ end
 
 def horizontal_rev(array)
   let = array[1].length
-    base = 0
-    while let > 0
-      if array[0][base] == array[1][let]
-        p  let , array[1][let]
-        let -= 1 
-        base += 1
-      else
-        let -= 1
-      end
+  base = 0
+  while let > 0
+    if array[0][base] == array[1][let]
+      p let , array[1][let]
+      let -= 1 
+      base += 1
+    else
+      let -= 1
     end
+  end
 end
 
 
