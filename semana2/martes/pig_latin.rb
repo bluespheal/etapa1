@@ -46,4 +46,4 @@ end
 
 # p pig_latin_word
 
-p pig_latin_sentence
+puts pig_latin_sentence
