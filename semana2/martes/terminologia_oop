@@ -1,0 +1,20 @@
+Inheritance nos permite heredar métodos de una clase (superclase) a otras (subclases). Así no repetimos código y lo mantenemos DRY. En el siguiente ejemplo, clase hija cuenta con el método 'common':
+
+class ClaseMadre
+  def common
+
+  end
+end
+
+class ClaseHija < ClaseMadre
+
+end
+
+Composición consiste en relacionar objetos simples que juntos pueden cumplir funciones complejas. Una clase puede estar compuesta por diferentes objetos relacionados. por ejemplo, una clase "Cama", puede estar compuesta por los objetos "cojín", "colchón", "cabezera" y "base"
+
+La encapsulación es el proceso mediante el cual podemos esconder el mecanismo interno de nuestros objetos y solamente hacer visible lo que queramos y así poder facilitar su usabilidad. 
+
+
+
+
+
