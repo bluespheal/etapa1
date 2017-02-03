@@ -8,7 +8,7 @@ class Page
     @doc = Nokogiri::HTML(open(@url))
     puts "Fetching..."
     puts "Título: #{title} \nLinks:"
-    "#{links}"
+    links
   end
 
   def fetch!
@@ -38,6 +38,7 @@ class Browser
         inside_page = Page.new(temp).links[response.to_i - 1]['href']
         Page.new("#{temp}#{inside_page}")
         puts "url"
+        p response
         response = gets.chomp
         if response == "exit"
           break
@@ -47,6 +48,7 @@ class Browser
       end      
       Page.new(response)
       puts "url"
+      p response
       response = gets.chomp
     end
   end

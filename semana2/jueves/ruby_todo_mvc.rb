@@ -23,7 +23,7 @@ class ListAdder
       CSV.open("list.csv", "ab") do |csv|
         csv << string
       end
-      p "Agregaste la tarea: '#{string.join}' a tu lista."
+      p "Agregaste la tarea '#{string.join[4..-1]}' a tu lista."
     end
   end
 end
@@ -34,6 +34,7 @@ class ListDeleter
       array = CSV.read("list.csv")
       array.each_with_index do |x, i|
         if ARGV[1].to_i - 1 == i
+          @string = x
           array.delete(x)
         end
       end
@@ -42,6 +43,7 @@ class ListDeleter
           csv << i
         end
       end 
+      p "Borraste la tarea '#{@string.join[4..-1]}' de tu lista."
       ListParser.list_view
     end
   end
@@ -53,6 +55,7 @@ class ListCompleter
       array = CSV.read("list.csv")
       array.each_with_index do |x, i|
         if ARGV[1].to_i - 1 == i
+          @string = x
           x[0].gsub!(" ", "X")
           x[0][1]
         end
@@ -62,6 +65,7 @@ class ListCompleter
           csv << i
         end
       end 
+      p "Completaste la tarea '#{@string.join[4..-1]}'!"
       ListParser.list_view
     end
   end
@@ -72,7 +76,6 @@ class List
   ListAdder.add_item
   ListDeleter.delete_item
   ListCompleter.complete_item
-  
 end
 
 list = List.new
