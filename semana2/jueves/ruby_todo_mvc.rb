@@ -30,7 +30,7 @@ end
 
 class ListDeleter 
   def self.delete_item
-    if ARGV[0] == "delete" # "=" NO!!!! "=="!!!!
+    if ARGV[0] == "delete"
       array = CSV.read("list.csv")
       array.each_with_index do |x, i|
         if ARGV[1].to_i - 1 == i
