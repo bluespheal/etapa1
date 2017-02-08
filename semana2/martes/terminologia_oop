@@ -1,0 +1,42 @@
+Inheritance nos permite heredar métodos de una clase (superclase) a otras (subclases). Así no repetimos código y lo mantenemos DRY. En el siguiente ejemplo, clase hija cuenta con el método 'common':
+
+class ClaseMadre
+  def common
+
+  end
+end
+
+class ClaseHija < ClaseMadre
+
+end
+
+Composición consiste en relacionar objetos simples que juntos pueden cumplir funciones complejas. Una clase puede estar compuesta por diferentes objetos relacionados. por ejemplo, una clase "Cama", puede estar compuesta por los objetos "cojín", "colchón", "cabezera" y "base"
+
+La encapsulación es el proceso mediante el cual podemos esconder el mecanismo interno de nuestros objetos y solamente hacer visible lo que queramos y así poder facilitar su usabilidad. 
+
+"Si habla como pato y camina como pato y come como pato, entonces es un pato"... Esta es la idea central de 'duck typing' y se aplica a los tipos de objetos. No es necesario definir el tipo de objeto, su comportamiento lo define.
+
+La ley de Demeter es un principio de diseño de software que propone que cada parte de un programa (cada unidad), debe tener el menor conocimiento posible de las otras unidades del programa, y solamente debe tener contacto con unidades relacionadas. Es una ley fundamental de la programación orientada a objetos.
+
+Overriding en programación orientada a objetos es cuando un método en una subclase "cancela" a un método con el mismo nombre de la superclase. O sea, cuando en la subclase usamos un método que ya está en la superclase, el método de la subclase es el que el programa utilizará.
+
+Los módulos nos permiten agrupar métodos, clases y constantes en un solo lugar. Nos ayudan a organizar y estructurar mejor nuestras aplicaciones. El contenido del módulo está disponible para cualquier parte del programa (mixin)
+
+Scope es la parte del código donde los nombres de las partes del programa (como variables) son accesibles para esa parte del programa. En el siguiente ejemplo, '@var1' sólo es accesible dentro de 'clase1' (su scope) y '@var2' sólo dentro de 'clase2'.
+
+class clase1
+  @var1
+end
+class clase2
+  @var2
+end
+
+El uso de métodos privados y públicos nos ayuda a implementar la encapsulación en la programación orientada a objetos. Los métodos privados solamente están disponibles dentro de la clase donde fueron definidos. Los métodos públicos están disponibles para cualquier clase, incluso desde afuera de la clase donde fueron creados.
+
+Los métodos de instancia sólo están disponibles para la instancia de una clase. Los métodos de clase pueden ser usados con sólo el nombre de la clase (no se necesitan instancias).
+
+La palabra polimorfismo quiere decir muchas formas. En programación orientada a objetos, el polimorfismo quiere decir que una entidad (como una variable o un método), puede tener múltiples formas. una variable con el mismo nombre puede responder a diferentes métodos dependiendo de cómo se llame dicha variable.
+
+Separation of Concerns quiere decir que cada parte de un programa ejecuta una tarea específica y única, para manejar mejor su estructura, encapsulando la información y así facilitar el manejo de información.
+
+
