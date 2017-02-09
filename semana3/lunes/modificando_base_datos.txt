@@ -1,0 +1,17 @@
+INSERT INTO Orders
+   ...> (OrderID, CustomerID, OrderDate, RequiredDate, ShippedDate)
+   ...> VALUES
+   ...> (21, 5, '2016-02-01', '2016-02-19', '2016-02-05');
+
+INSERT INTO OrderDetails
+   ...> (OrderDetailID, OrderID, ProductID, UnitPrice, Quantity)
+   ...> VALUES
+   ...> (48, 21, 2, 0.25, 55),
+   ...> (49, 21, 4, 1.39, 97);
+
+update orders set customerid = 6 where customerid = 3 and orderdate > '2013-01-01';
+
+delete from orders where customerid = 5;
+delete from orderdetails where orderid = 13;
+delete from orderdetails where orderid = 17;
+delete from customers where customerid = 5;
