@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 INSERT INTO Orders
    ...> (OrderID, CustomerID, OrderDate, RequiredDate, ShippedDate)
    ...> VALUES
@@ -15,3 +16,23 @@ delete from orders where customerid = 5;
 delete from orderdetails where orderid = 13;
 delete from orderdetails where orderid = 17;
 delete from customers where customerid = 5;
+=======
+insert into customers (companyname, contactname, contacttitle, adress, city, state) values ('NSP', 'Danny Sexbang', 'Vocalist', '6969 Bang St', 'Attitude City', "CL");
+
+select customers.CompanyName, orders.orderid from orders
+join customers on customers.customerid = orders.customerid
+group by orders.orderid having customers.companyname = "Floor Co." and orders.orderdate between date('2013-01-01')  and date('2013-12-31');
+
+update orders 
+set customerid = 6
+where customerid = 3 and orders.orderdate between date('2013-01-01') and date('2013-12-31');
+
+delete from orderdetails
+where orderid = 13 or orderid = 17;
+
+delete from orders
+where customerid = 5;
+
+delete from customers
+where companyname= "Slots Carpet"
+>>>>>>> refs/remotes/origin/master
